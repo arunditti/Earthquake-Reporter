@@ -9,28 +9,28 @@ import android.widget.EditText;
 public class Earthquake {
 
     //Magnitude of the earthquake
-    private String mMagnitude;
+    private double mMagnitude;
 
     //Location of the earthquake
     private String mLocation;
 
     //Date of the earthquake
-    private String mDate;
+    private long mTimeInMilliseconds;
 
     /**
      * @param
      * @param magnitude is the magnitude of the earthquake
      * @param location is the location of the earthquake
-     * @param date is the date the earthquake happened
+     * @param timeInMilliseconds is the date the earthquake happened
      */
 
-    public Earthquake(String magnitude, String location, String date) {
+    public Earthquake(double magnitude, String location, long timeInMilliseconds) {
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
-    public String getMagnitude(){
+    public double getMagnitude(){
         return mMagnitude;
     }
 
@@ -38,8 +38,8 @@ public class Earthquake {
         return mLocation;
     }
 
-    public String getDate() {
-        return mDate;
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
 }

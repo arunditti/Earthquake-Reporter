@@ -71,13 +71,13 @@ public class QueryUtils {
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
 
                 //Get the value of the key called "mag"
-                String magnitude = properties.getString("mag");
+                double magnitude = properties.getDouble("mag");
 
                 //Get the value of the key called "place"
                 String location = properties.getString("place");
 
                 //Get the value of the key called "time"
-                String time = properties.getString("time");
+                long time = properties.getLong("time");
 
                 //Create a new {@link Earthquake} object with the magnitude, location, time,
                 // and url from the JSON response.
