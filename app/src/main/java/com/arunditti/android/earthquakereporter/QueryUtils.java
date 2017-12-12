@@ -46,6 +46,14 @@ public class QueryUtils {
     public static List<Earthquake> fetchEarthquakeData(String requestUrl) {
 
         Log.i(LOG_TAG, "FetchEarthquakeData method is called");
+
+       /** //Code to check if the progress bar is running
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+
         // Create URL object
         URL url = createUrl(requestUrl);
 
